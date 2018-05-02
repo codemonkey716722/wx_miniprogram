@@ -1,0 +1,12 @@
+<view class="view">
+  <button type="default" bindtap="click" class="scan">点我扫一扫二维码读取内容</button>
+   <view>{{show}}</view>
+</view>
+
+
+
+<!-- 自定义弹窗 -->
+<view class="showModule" wx:if="{{isShow}}">
+  <!-- 这部分内容可以灵活修改，例如改成一个模态框 -->
+  <view class="text ">{{text}}</view>
+</view>

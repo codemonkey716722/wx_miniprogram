@@ -1,0 +1,9 @@
+<template name="toast">
+  <view class="toast-content-wrap" wx:if="{{isShowToast}}">
+    <view class="toast-content">
+      <i wx:if="{{iconToast!==''&&!imageToast}}" class="iconfont {{iconToast}}"></i>
+      <image src="{{imageToast}}" class="toast-loading" wx:if="{{imageToast}}"></image>
+      <view class="content-text">{{textToast}}</view>
+    </view>
+  </view>
+</template>

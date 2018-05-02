@@ -1,0 +1,33 @@
+.toast-content-wrap{
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.toast-content{
+  height: 196rpx;
+  width: 360rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #D2D2D2;
+  background: rgba(0,0,0,0.90);
+  border-radius: 8px;
+}
+.toast-content .iconfont{
+  margin-bottom: 30rpx;
+  font-size: 60rpx;
+}
+.toast-content .content-text{
+  font-size: 16px;
+}
+.toast-loading{
+  width:50rpx;
+  height:50rpx;
+  margin-bottom: 30rpx;
+}
