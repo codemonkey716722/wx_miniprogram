@@ -5,6 +5,8 @@ Page({
         show: "",
         duration:'',
         isShow:false,
+        typeList: ['success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'],
+        isScroll: true,
     },
     onLoad: function () {
     },
@@ -22,39 +24,34 @@ Page({
             icon: 'success', 
             duration: 2000
         })
-    },
+        },
         fail: (res) => {
-            //出现
-            var timestamp = Date.parse(new Date());
-            timestamp = timestamp / 1000;
             this.setData({
                 text: "扫描失败！",
                 isShow: true,
-                duration: 3000
+                isScroll: false
             })
-            var time1=new Date();
-            console.log(that.data.duration);
             setTimeout(function(){
                 that.setData({
                     isShow:false,
+                    isScroll: true,
                 })
-            },5000);
-
-
-
-            // var date=new Date();
-            // date.setHours(date.getSeconds()+1);
-            //
-            // var timeout=that.data.duration;
-            // if(timeout>'1000'){
-            //     console.log(timeout)
-            //     this.setData({
-            //         isShow: false,
-            //     })
-            // }
+            },3000);
         },
         complete: (res) => {
         }
     })
+    },
+    clear_button: function () {
+        var that = this;
+        that.setData({
+            isShow:false,
+            isScroll: true,
+        })
+    },
+    redirect_url:function(){
+        wx.navigateTo({    
+             url:"/pages/demo/demo"
+        })
     }
 })

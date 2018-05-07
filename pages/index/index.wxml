@@ -1,12 +1,14 @@
-<view class="view">
-  <button type="default" bindtap="click" class="scan">点我扫一扫二维码读取内容</button>
-   <view>{{show}}</view>
-</view>
+<scroll-view scroll-y="{{isScroll}}"> 
+	<!-- 自定义弹窗 -->
+	<view class="showModule" wx:if="{{isShow}}">
+		<icon type="clear" bindtap="clear_button" class="clear_icon" size="30"/>
+		<image class="img_icon" src="/images/me.png" mode="aspectFill"/>
+	    <view class="text">{{text}}</view>
+	</view>
 
-
-
-<!-- 自定义弹窗 -->
-<view class="showModule" wx:if="{{isShow}}">
-  <!-- 这部分内容可以灵活修改，例如改成一个模态框 -->
-  <view class="text ">{{text}}</view>
-</view>
+	<view class="view">
+		<view>{{show}}</view>
+		<button type="default" bindtap="click" class="scan">点我扫一扫二维码读取内容</button>
+	    <button type="default" bindtap="redirect_url"class="style_button">点击去Demo页面</button>
+	</view>
+</scroll-view>

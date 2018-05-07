@@ -1,5 +1,5 @@
 /* index.wxss */
-
+/* 自定义样式 */
 .showModule {
   /* 用样式控制隐藏  visibility: hidden;*//* flex 布局 */
   display: flex;
@@ -8,10 +8,10 @@
   /* 生成绝对定位的元素，相对于浏览器窗口进行定位 */
   position: fixed;
   /* 如果 height,width 不变的情况下，left,top 不用修改 */
-  left: 35%;
-  top: 40%;
-  height: 20vh;
-  width: 30vw;
+  left: 10%;
+  top: 10%;
+  height: 740rpx;
+  width: 600rpx;
   /* 不透明 */
   opacity: 0.99;
   background-color: #7b7b7b;
@@ -27,26 +27,61 @@
   color: white;
   font-size: 13pt;
   font-family: "微软雅黑";
-  /* Helvetica,
-     Arial,
-     Hiragino Sans GB,
-     Source Han Sans CN,
-     PingFang SC,
-     Roboto,
-     微软雅黑,
-     Heiti SC,
-     Microsoft Yahei,
-     sans-serif; */
+  text-align:cneter;
+  margin-bottom:-270px;
+  position:absolute;
+  top:92%;
+
 }
+button.style_button{
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:18px;
+  text-align:center;
+  text-decoration:none;
+  line-height:2.55555556;
+  border-radius:5px;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+  color:#000000;
+  background-color:#F8F8F8;
+  margin-top: 20rpx;
+}
+icon.clear_icon{
+  position:absolute;
+  height:97%;
+  right:2%;
+}
+.img_icon{
+  width:80%;
+  height:80%;
 
-
-
-page{
+}
+.text{
+  height:30px;
+}
+scroll-view {
   height: 100%;
 }
-.view{
+
+
+Page {
+  position: absolute;
+  font-size: 36rpx;
   width: 100%;
   height: 100%;
+  height:auto; 
+  display: block;
+  background: #FAFAFA;
+  overflow-y: hidden;
+}
+.view{
+  margin: 900rpx 50rpx 0rpx 50rpx;
 }
 .cover-9{
   width: 688rpx;
@@ -55,10 +90,8 @@ page{
   border:2rpx solid;
   border-radius:5px;
 }
-button{
-  margin: 900rpx 50rpx 0rpx 50rpx;
-}
 button .scan{
   width: 730rpx;
   height:30rpx;
+  margin: 900rpx 50rpx 0rpx 50rpx;
 }
